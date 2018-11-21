@@ -27,4 +27,9 @@ Cinema.prototype.checkFilmsFromYear = function (releaseYear) {
   })
 };
 
+Cinema.prototype.checkFilmsOverLength = function (minutes) {
+  return this.films.every((film) => {
+    return film.length >= minutes;
+  })
+};
 module.exports = Cinema;
